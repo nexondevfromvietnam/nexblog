@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Post</title>
+    <link type="text/css" rel="stylesheet" href="../css/postSubmit/css.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Your Post</h2>
+        <form action="/submit-post" method="POST">
+            <div class="form-group">
+                <input type="text" id="postTitle" name="postTitle" placeholder="Title" required />
+                <textarea id="postContent" name="postContent" rows="8" placeholder="Write your thoughts here..." required></textarea>
+                <input type="text" id="thumbnailLink" name="thumbnailLink" placeholder="Thumbnail Link" />
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        
+        <div class="textile-legend">
+            <h3>Textile Formatting Guide</h3>
+            <ul>
+                <li><strong>*bold*</strong>: <code>*bold*</code></li>
+                <li><em>_italic_</em>: <code>_italic_</code></li>
+                <li><del>-strikethrough-</del>: <code>-strikethrough-</code></li>
+                <li>h1. Header: <code>h1. Header</code></li>
+                <li>"Link":http://example.com: <code>"Link":http://example.com</code></li>
+                <li>![Image](image_url): <code>![Image](image_url)</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
