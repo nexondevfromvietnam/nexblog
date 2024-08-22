@@ -138,6 +138,7 @@ app.get("/dashboard", (req, res) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link type="text/css" rel="stylesheet" href="/css/dashboard/css.css"/>
+    <link rel="icon" href="./img/a.jpg" type="image"/>
 </head>
 <body>
     <div class="navbar-container">
@@ -266,14 +267,15 @@ app.get("/home", async (req, res) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Home</title>
+                <title>Home | NEXBlog</title>
                 <link rel="stylesheet" href="../css/home/css.css">
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+                <link rel="icon" href="./img/a.jpg" type="image"/>
             </head>
             <body>
-                <h1 style="text-align: center;">All Posts</h1><p style="position: fixed; float: right; bottom: 2vh; right: 2vw;"><a href="/login">Login/Register</a></p>
+                <h1 style="text-align: center;">NEXBlog | Home</h1><p style="position: fixed; float: right; bottom: 2vh; right: 2vw;"><a href="/login">Login/Register</a></p>
                 <div class="post-container">
                     ${postList}
                 </div>
@@ -305,6 +307,7 @@ app.get("/post/:id", async (req, res) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${post.title}</title>
     <link rel="stylesheet" href="../css/post/css.css">
+    <link rel="icon" href="../img/a.jpg" type="image"/>
 </head>
 <body>
     <div class="post-container">
@@ -312,6 +315,7 @@ app.get("/post/:id", async (req, res) => {
         <div class="post-content">${contentHtml}</div>
         <p>Created on: ${post.createdTime.toDateString()}</p>
         <a href="/home" class="back-link">Back to all posts</a>
+        <p style="text-align: center">Made with <a style="text-decoration: none;" href="https://github.com/nexondevfromvietnam/nexblog">NEXBlog</a></p>
     </div>
 </body>
 </html>
